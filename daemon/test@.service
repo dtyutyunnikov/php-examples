@@ -1,0 +1,12 @@
+[Unit]
+Description=Test App Worker
+PartOf=test.target
+
+[Service]
+Type=simple
+Environment=TEST_WORKER=%i
+ExecStart=/usr/bin/php /home/developer/daemon/worker.php
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

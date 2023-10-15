@@ -1,0 +1,6 @@
+[Unit]
+Description=Test App Workers Group
+Requires=test@1.service test@2.service test@3.service
+
+[Install]
+WantedBy=default.target
